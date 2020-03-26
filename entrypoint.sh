@@ -35,6 +35,7 @@ git branch --verbose
 
 #if [ "$GITHUB_REPOSITORY" = "mikeal/merge-release" ]
 #then
+apt-get install wget
 wget https://raw.githubusercontent.com/elliot-nelson/merge-release/master/merge-release-run.js
 #curl https://github.com/elliot-nelson/merge-release/blob/master/entrypoint.sh -o entrypoint.sh
   echo "node merge-release-run.js"
