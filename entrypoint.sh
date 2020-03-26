@@ -35,6 +35,8 @@ git branch --verbose
 
 #if [ "$GITHUB_REPOSITORY" = "mikeal/merge-release" ]
 #then
+curl https://raw.githubusercontent.com/elliot-nelson/merge-release/master/merge-release-run.js -o merge-release-run.js
+#curl https://github.com/elliot-nelson/merge-release/blob/master/entrypoint.sh -o entrypoint.sh
   echo "node merge-release-run.js"
   sh -c "node merge-release-run.js $*"
 #else
