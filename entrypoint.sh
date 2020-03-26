@@ -33,13 +33,18 @@ git remote --verbose
 git show-ref # useful for debugging
 git branch --verbose
 
+set +e
+
 #if [ "$GITHUB_REPOSITORY" = "mikeal/merge-release" ]
 #then
-apt-get install wget
+echo wget
 wget https://raw.githubusercontent.com/elliot-nelson/merge-release/master/merge-release-run.js
+
 #curl https://github.com/elliot-nelson/merge-release/blob/master/entrypoint.sh -o entrypoint.sh
   echo "node merge-release-run.js"
   sh -c "node merge-release-run.js $*"
+echo "exiting 3"
+exit 3
 #else
 #  echo "npx merge-release"
 #  sh -c "npx merge-release $*"
