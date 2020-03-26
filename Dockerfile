@@ -11,7 +11,7 @@ LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
 COPY LICENSE README.md /
 
-RUN apt-get update && apt-get -y --no-install-recommends install git wget && rm -rf /var/lib/apt/lists/* 
+RUN apt-get update && apt-get -y --no-install-recommends install ca-certificates git wget && rm -rf /var/lib/apt/lists/*
 
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
